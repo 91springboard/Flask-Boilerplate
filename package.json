@@ -1,0 +1,60 @@
+{
+  "name": "FlaskBp",
+  "version": "0.1.0",
+  "description": "Starter Code for Flask app with Gulp build automation",
+  "authors": [
+    "Vibhanshu Chaturvedi"
+  ],
+  "homepage": "https://github.com/vibhanshuc/flaskbp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vibhanshuc/flaskbp.git"
+  },
+  "scripts": {
+    "init": "npm install",
+    "install": "bower install"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer": "^6.0.3",
+    "browser-sync": "^2.9.10",
+    "del": "^2.0.2",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.0.2",
+    "gulp-awspublish": "^3.0.1",
+    "gulp-cdnify": "^1.0.2",
+    "gulp-clean": "^0.3.1",
+    "gulp-cloudfront": "0.0.14",
+    "gulp-env": "^0.2.0",
+    "gulp-google-cdn": "^2.0.0",
+    "gulp-htmlmin": "^1.2.0",
+    "gulp-if": "^2.0.0",
+    "gulp-imagemin": "^2.3.0",
+    "gulp-inject": "^3.0.0",
+    "gulp-jscs": "^3.0.1",
+    "gulp-jshint": "^1.11.2",
+    "gulp-jsonminify": "^1.0.0",
+    "gulp-less": "^3.0.3",
+    "gulp-livereload": "^3.8.1",
+    "gulp-load-plugins": "^1.0.0-rc.1",
+    "gulp-minify-css": "^1.2.1",
+    "gulp-minify-html": "^1.0.4",
+    "gulp-nodemon": "^2.0.4",
+    "gulp-plumber": "^1.0.1",
+    "gulp-postcss": "^6.0.1",
+    "gulp-print": "^2.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-rev": "^6.0.1",
+    "gulp-rev-all": "^0.8.21",
+    "gulp-sass": "^2.0.4",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-task-listing": "^1.0.1",
+    "gulp-uglify": "^1.4.1",
+    "gulp-usemin": "0.3.8",
+    "gulp-util": "^3.0.6",
+    "jshint-stylish": "^2.0.1",
+    "run-sequence": "^1.1.4",
+    "wiredep": "^2.2.2",
+    "yargs": "^3.24.0"
+  }
+}

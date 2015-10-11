@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+{% block head %}
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>{% block title %}{% endblock %}</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {% block meta %}
+        {% endblock %}
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        {% block headcss %}
+
+            <!-- build:css /static/styles/vendor.css -->
+                <!-- bower:css -->
+                <!-- endbower -->
+            <!-- endbuild -->
+
+            <!-- build:css /static/styles/style.css -->
+                <!-- inject:css -->
+                <!-- endinject -->
+            <!-- endbuild -->
+        {% endblock %}
+        {% block headjs %}
+        {% endblock %}
+
+    </head>
+{% endblock head %}
+<body>
+<section id="container">
+    {% block topnav %}
+        <!-- **********************************************************************************************************************************************************
+        TOP BAR CONTENT & NOTIFICATIONS
+        *********************************************************************************************************************************************************** -->
+        <!--header start-->
+        <header class="header black-bg navbar-inverse">
+            <div class="sidebar-toggle-box">
+                <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
+            </div>
+            <!--logo start-->
+            <a href="index.html" class="logo" style="margin: 3px"><img style="height: 50px"
+                                                                       src="static/img/logo.png"></a>
+            <a href="index.html" class="pull-right" style="margin: 10px"><img style="height: 40px"
+                                                                              class="img-rounded img-thumbnail"
+                                                                              src="https://placeholdit.imgix.net/~text?&txt=&w=40&h=40"></a>
+        </header>
+        <!--header end-->
+    {% endblock %}
+    {% block sidenav %}
+        <!-- **********************************************************************************************************************************************************
+        MAIN SIDEBAR MENU
+        *********************************************************************************************************************************************************** -->
+        <!--sidebar start-->
+        <aside>
+            <div id="sidebar" class="nav-collapse">
+                <!-- sidebar menu start-->
+                <ul class="sidebar-menu" id="nav-accordion">
+                    <p class="text-center"><a href="profile.html"><img
+                            src="https://placeholdit.imgix.net/~text?txt=&w=40&h=40" class="img-rounded img-thumbnail"
+                            width="60"></a></p>
+                    <h5 class="text-center">Anuj Pultsya</h5>
+                    <li class="mt">
+                        <a class="active" href="/">
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/">
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:;">
+                            <span>Members</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="#manage">Manage</a></li>
+                            <li><a href="#">Add</a></li>
+                            <li><a href="#">Offboard</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:;">
+                            <span>Events</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="#">Manage</a></li>
+                            <li><a href="#">Create</a></li>
+                            <li><a href="#">Other</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:;">
+                            <span>Bookings</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="#">Conference Rooms</a></li>
+                            <li><a href="#">Guests</a></li>
+                            <li><a href="#">Day Passes</a></li>
+                            <li><a href="#">Other resources</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:;">
+                            <span>Leads</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="#">Manage</a></li>
+                            <li><a href="#">Add</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#Support">
+                            <span>Support</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>Invoices</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>Collections</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#Wiki">
+                            <span>Wiki</span>
+                        </a>
+                    </li>
+
+                </ul>
+                <!-- sidebar menu end-->
+            </div>
+        </aside>
+        <!--sidebar end-->
+    {% endblock %}
+    {% block body %}
+        <section id="main-content">
+            <section class="wrapper">
+                <div class="navbar">
+                    <ul class="nav nav-tabs">
+                        <li class="active">
+                            <a href="#">All</a>
+                        </li>
+                        <li>
+                            <a href="#">Okhla</a>
+                        </li>
+                    </ul>
+                </div>
+                {% block container %}
+                {% endblock %}
+            </section>
+        </section>
+    {% endblock %}
+
+    {% block bodyjs %}
+        <!-- build:js /static/scripts/vendor.js -->
+            <!-- bower:js -->
+           <!-- endbower -->
+        <!-- endbuild -->
+
+        <!-- build:js /static/scripts/lib.js -->
+            <!-- inject:js -->
+            <!-- endinject -->
+        <!-- endbuild -->
+        <!-- build:remove -->
+        <script>document.write('<script src="http://'
+                + (location.host || 'localhost').split(':')[0]
+                + ':35729/livereload.js?snipver=1" type="text/javascript"><\/script>')
+        </script>
+        <!-- endbuild -->
+    {% endblock %}
+</section>
+</body>
+</html>

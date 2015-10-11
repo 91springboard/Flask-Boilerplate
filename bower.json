@@ -1,0 +1,12 @@
+{
+  "name": "FlaskBP",
+  "version": "1.0.0",
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "c3": "~0.4.10",
+    "dcjqaccordion": "~2.7.1",
+    "font-awesome": "~4.4.0",
+    "jquery.nicescroll": "jquery-nicescroll#~3.6.0",
+    "jquery.scrollTo": "~2.1.2"
+  }
+}

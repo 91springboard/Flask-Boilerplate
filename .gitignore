@@ -1,0 +1,17 @@
+/bower_components
+.DS_Store
+*~
+*.pyc
+.sass-cache
+
+# virtual venv
+venv
+
+/build
+# pycharm project config dir
+/dev
+.idea
+/src/static/styles
+/src/static/bower_components
+/.tmp
+node_modules
