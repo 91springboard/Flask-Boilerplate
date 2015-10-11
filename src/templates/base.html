@@ -18,11 +18,16 @@
 
             <!-- build:css /static/styles/vendor.css -->
                 <!-- bower:css -->
+                <link rel="stylesheet" href="/static/bower_components/bootstrap/dist/css/bootstrap.css" />
+                <link rel="stylesheet" href="/static/bower_components/c3/c3.css" />
+                <link rel="stylesheet" href="/static/bower_components/components-font-awesome/css/font-awesome.css" />
                 <!-- endbower -->
             <!-- endbuild -->
 
             <!-- build:css /static/styles/style.css -->
                 <!-- inject:css -->
+                <link rel="stylesheet" href="/static/styles/style.css">
+                <link rel="stylesheet" href="/static/styles/style-responsive.css">
                 <!-- endinject -->
             <!-- endbuild -->
         {% endblock %}
@@ -163,11 +168,20 @@
     {% block bodyjs %}
         <!-- build:js /static/scripts/vendor.js -->
             <!-- bower:js -->
-           <!-- endbower -->
+            <script src='/static/bower_components/jquery/dist/jquery.js'></script>
+            <script src='/static/bower_components/bootstrap/dist/js/bootstrap.js'></script>
+            <script src='/static/bower_components/d3/d3.js'></script>
+            <script src='/static/bower_components/c3/c3.js'></script>
+            <script src='/static/bower_components/jquery.cookie/jquery.cookie.js'></script>
+            <script src='/static/bower_components/dcjqaccordion/js/jquery.dcjqaccordion.2.7.min.js'></script>
+            <script src='/static/bower_components/jquery.nicescroll/jquery.nicescroll.js'></script>
+            <script src='/static/bower_components/jquery.scrollTo/jquery.scrollTo.js'></script>
+            <!-- endbower -->
         <!-- endbuild -->
 
         <!-- build:js /static/scripts/lib.js -->
             <!-- inject:js -->
+            <script src="/static/scripts/app.js"></script>
             <!-- endinject -->
         <!-- endbuild -->
         <!-- build:remove -->

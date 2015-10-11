@@ -6,7 +6,7 @@ fi
 virtualenv $1
 . 'ven/bin/activate'
 pip install -r requirements.txt
-npm install --save-dev
+npm install
 bower install
 if [ -z $1 ]; then
     gulp build:local
