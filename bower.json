@@ -4,9 +4,10 @@
   "dependencies": {
     "bootstrap": "3.3.4",
     "c3": "~0.4.10",
-    "dcjqaccordion": "~2.7.1",
     "components-font-awesome": "~4.0.3",
+    "dcjqaccordion": "~2.7.1",
     "jquery.nicescroll": "jquery-nicescroll#~3.6.0",
-    "jquery.scrollTo": "~2.1.2"
+    "jquery.scrollTo": "~2.1.2",
+    "knockout": "~3.3.0"
   }
 }

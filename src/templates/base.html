@@ -1,16 +1,11 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js"> <!--<![endif]-->
+<html>
 {% block head %}
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>{% block title %}{% endblock %}</title>
         <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         {% block meta %}
         {% endblock %}
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -149,7 +144,7 @@
     {% block body %}
         <section id="main-content">
             <section class="wrapper">
-                <div class="navbar">
+                <div class="navbar sticky stick-60" id="location-bar">
                     <ul class="nav nav-tabs">
                         <li class="active">
                             <a href="#">All</a>
@@ -176,6 +171,7 @@
             <script src='/static/bower_components/dcjqaccordion/js/jquery.dcjqaccordion.2.7.min.js'></script>
             <script src='/static/bower_components/jquery.nicescroll/jquery.nicescroll.js'></script>
             <script src='/static/bower_components/jquery.scrollTo/jquery.scrollTo.js'></script>
+            <script src='/static/bower_components/knockout/dist/knockout.js'></script>
             <!-- endbower -->
         <!-- endbuild -->
 

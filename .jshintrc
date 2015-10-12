@@ -57,6 +57,7 @@
     "globals": {
         "$": false,
         "d3": false,
-        "c3": false
+        "c3": false,
+        "ko": false
     }
 }

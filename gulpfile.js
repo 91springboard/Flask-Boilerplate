@@ -114,17 +114,10 @@ gulp.task("js", ['vet'], function() {
         .pipe($.livereload());
 });
 
-gulp.task("usemin", ["sass"], function() {
+gulp.task("usemin", ["sass", "js"], function() {
     log('into usemin');
     return gulp.src([config.src.html])
         .pipe($.plumber())
-        .pipe($.usemin({
-            assetsDir: config.src.root,
-            outputRelativePath: config.outputRelativePath,
-            css: [],
-            html: [],
-            js: ['vet']
-        }))
         .pipe($.livereload());
 });
 
@@ -245,6 +238,10 @@ gulp.task('build:local', ['sass', 'inject', 'runserver', 'vet'], function () {
     gulp.watch(config.src.html, ["usemin"]);
     gulp.watch(config.src.js, ["js"]);
     gulp.watch(config.src.css, ["cssmin-local"]);
+});
+
+gulp.task('sass-watch', function (){
+   gulp.watch(config.src.sass, ['sass'], $.livereload());
 });
 
 function setenv(obj) {

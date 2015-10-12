@@ -10,6 +10,30 @@ $(function () {
         autoExpand: true,
         classExpand: 'dcjq-current-parent'
     });
+    var stickyHeaderTop = 60;
+    var wSize = $(window).width();
+    $(window).scroll(function () {
+        if ($(window).scrollTop() > stickyHeaderTop) {
+            console.log('scrollTop greater than stickyheader');
+            if (wSize <= 768) {
+                //console.log('wsize:' +wSize);
+                $('.sticky').addClass('stick-0').removeClass('stick-60 no-stick');
+            } else {
+                $('.sticky').addClass('stick-60').removeClass('stick-0 no-stick');
+            }
+        } else {
+            console.log('scrollTop lower than stickyheader');
+            if (wSize <= 768) {
+                //console.log('wsize:' +wSize);
+                $('.sticky').addClass('no-stick').removeClass('stick-0 stick-60');
+            }
+              else {
+                $('.sticky').addClass('stick-60').removeClass('stick-0 no-stick');
+            }
+        }
+    });
+    // Activates knockout.js
+    ko.applyBindings(new AppViewModel());
 });
 
 var Script = (function () {
@@ -35,11 +59,26 @@ var Script = (function () {
             var wSize = $(window).width();
             if (wSize <= 768) {
                 $('#container').addClass('sidebar-close');
+                $('#location-bar').css({
+                    'left': '0px'
+                });
                 $('#sidebar > ul').hide();
             }
 
             if (wSize > 768) {
+                console.log($('#location-bar').css('position'));
                 $('#container').removeClass('sidebar-close');
+                if (!$('#container').hasClass('sidebar-closed')){
+                    $('#location-bar').css({
+                        'left': '210px'
+                    });
+                }
+                if ($('#location-bar').css('position')==='relative'){
+                    console.log('loc re');
+                    $('#location-bar').css({
+                        'left': '0px'
+                    });
+                }
                 $('#sidebar > ul').show();
             }
         }
@@ -53,6 +92,9 @@ var Script = (function () {
             $('#main-content').css({
                 'margin-left': '0px'
             });
+            $('#location-bar').css({
+                'left': '0px'
+            });
             $('#sidebar').css({
                 'margin-left': '-210px'
             });
@@ -61,6 +103,9 @@ var Script = (function () {
         } else {
             $('#main-content').css({
                 'margin-left': '210px'
+            });
+            $('#location-bar').css({
+                'left': '210px'
             });
             $('#sidebar > ul').show();
             $('#sidebar').css({
@@ -314,3 +359,17 @@ function log(msg) {
         console.log(msg);
     }
 }
+
+function AppViewModel() {
+    this.firstName = ko.observable('Bert');
+    this.lastName = ko.observable('Bertington');
+    this.fullName = ko.computed(function () {
+        return this.firstName() + ' ' + this.lastName();
+    }, this);
+    this.capitalizeLastName = function () {
+        var currentVal = this.lastName();        // Read the current value
+        this.lastName(currentVal.toUpperCase()); // Write back a modified value
+    };
+}
+
+
