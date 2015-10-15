@@ -1,5 +1,6 @@
 /*---LEFT BAR ACCORDION----*/
 $(function () {
+    'use strict';
     $('#nav-accordion').dcAccordion({
         eventType: 'click',
         autoClose: true,
@@ -10,8 +11,7 @@ $(function () {
         autoExpand: true,
         classExpand: 'dcjq-current-parent'
     });
-    var stickyHeaderTop = 60;
-    var wSize = $(window).width();
+    var stickyHeaderTop = 60, wSize = $(window).width();
     $(window).scroll(function () {
         if ($(window).scrollTop() > stickyHeaderTop) {
             console.log('scrollTop greater than stickyheader');
@@ -26,8 +26,7 @@ $(function () {
             if (wSize <= 768) {
                 //console.log('wsize:' +wSize);
                 $('.sticky').addClass('no-stick').removeClass('stick-0 stick-60');
-            }
-              else {
+            } else {
                 $('.sticky').addClass('stick-60').removeClass('stick-0 no-stick');
             }
         }
@@ -37,17 +36,14 @@ $(function () {
 });
 
 var Script = (function () {
-
+    'use strict';
 //    sidebar dropdown menu auto scrolling
     $('#sidebar .sub-menu > a').click(function () {
-        var o = ($(this).offset());
-        var diff = 250 - o.top;
+        var o = ($(this).offset()), diff = 250 - o.top;
         if (diff > 0) {
             $('#sidebar').scrollTo('-=' + Math.abs(diff), 500);
-        }
-        else {
+        } else {
             $('#sidebar').scrollTo('+=' + Math.abs(diff), 500);
-
         }
     });
 
@@ -68,12 +64,12 @@ var Script = (function () {
             if (wSize > 768) {
                 console.log($('#location-bar').css('position'));
                 $('#container').removeClass('sidebar-close');
-                if (!$('#container').hasClass('sidebar-closed')){
+                if (!$('#container').hasClass('sidebar-closed')) {
                     $('#location-bar').css({
                         'left': '210px'
                     });
                 }
-                if ($('#location-bar').css('position')==='relative'){
+                if ($('#location-bar').css('position') === 'relative') {
                     console.log('loc re');
                     $('#location-bar').css({
                         'left': '0px'
@@ -349,6 +345,7 @@ c3.generate({
 });
 
 function log(msg) {
+    'use strict';
     if (typeof (msg) === 'object') {
         for (var item in msg) {
             if (msg.hasOwnProperty(item)) {
