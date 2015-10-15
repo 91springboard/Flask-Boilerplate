@@ -3,7 +3,7 @@ if [ -d venv ]; then
     deactivate
     rm -rf venv
 fi
-virtualenv $1
+virtualenv venv
 . 'ven/bin/activate'
 pip install -r requirements.txt
 npm install

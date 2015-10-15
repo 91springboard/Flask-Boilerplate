@@ -63,6 +63,43 @@
 
 
 ##### How to run this boilerplate
+Open terminal & go into root directory
+for local development execute
+
+``` bash
+        ./init.sh
+```
+
+for dev build execute
+
+``` bash
+        ./init.sh dev
+```
 
 
+for production build execute
 
+``` bash
+        ./init.sh prod
+```
+
+
+#### Details of Gulp Task
+
+will be added soon
+
+
+#### Assumption2
+
+    1. You have ownership of .npm directory
+       if not, to reclaim ownership of the .npm directory execute
+``` bash
+        sudo chown -R $(whoami) ~/.npm
+```
+
+
+    2. Port 5000 is unused
+        if not then execute
+``` bash
+        sudo  kill -9 $(lsof -i:5000 -t)
+```
