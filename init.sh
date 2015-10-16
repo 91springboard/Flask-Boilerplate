@@ -4,7 +4,7 @@ if [ -d venv ]; then
     rm -rf venv
 fi
 virtualenv venv
-. 'ven/bin/activate'
+. 'venv/bin/activate'
 pip install -r requirements.txt
 npm install
 bower install
